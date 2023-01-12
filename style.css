@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #191919;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    /* transform: scale(1, 1.05); */
+    /* transform: rotate(10deg); */
+    color: rgb(162, 162, 228);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* main  */
+
+.contenedor {
+    background-color: #191919;
+    /* background-image: linear-gradient(45deg, rgb(135, 4, 4),rgb(20, 20, 113)); */
+    /* background-image: 
+    radial-gradient(
+    circle,
+    rgb(195, 12, 12) 60%,
+    rgb(20, 20, 113)); */
+    background:
+        linear-gradient(75deg, #0000009a, #000000), url(../img/pizza.jpg);
+    background-size: cover;
+    animation-name: ancho;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease;
+    animation-duration: 7s;
+    animation-delay: 0s;
+    min-height: 100vh;
+    max-height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* .contenedor:hover{
+  flex-direction: column;
+  background:
+  linear-gradient(75deg, #0000009a, #000000), url(../img/hero.jpg);
+  background-size: cover;
+} */
+
+
+.caja {
+    background-color: #000000;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.c1 {
+    background-color: rgb(35, 92, 150);
+    /* con translate especificamos el movimiento de nuestro elemento, 1 valor es en el eje X y 2 valor en eje Y */
+    /* transform: translate(300px,300px); */
+    transition: 2s;
+    animation-name: ancho;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+/* .c1:hover {
+    transform: translate(1000px, 300px);
+} */
+
+.c2 {
+    background-color: rgb(234, 66, 5);
+    transition: 1s;
+
+}
+
+.c2:hover {
+    background-color: rgb(234, 223, 5);
+    transform: rotate(360deg);
+}
+
+.c3 {
+    background-color: rgb(44, 178, 24);
+    transition: 0.3s;
+  
+}
+
+.c3:hover {
+    transform: scale(1, 2);
+    background-color: rgb(23, 89, 12);
+
+
+}
+
+.c4 {
+    background-color: rgb(164, 25, 176);
+    transition: 2s;
+}
+
+.c4:hover {
+    transform: skew(20deg, 180deg);
+
+}
+
+
+
+/* cards */
+.card__contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 130px 30px;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: #191919;
+    color: #fff;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 5px 5px rgb(167, 167, 167);
+    background: #232b86;
+    transform: scale(1, 1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: grayscale(1);
+    transition: 0.4s;
+}
+
+.card img:hover {
+    filter: grayscale(0);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card__body a {
+    background-color: #fff;
+    color: #191919;
+    text-decoration: none;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    align-self: flex-end;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+footer {
+    background-color: #191919;
+    padding: 30px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+@keyframes ancho {
+
+    0% {
+        background-color: rgb(151, 2, 2);
+        background-image:
+        linear-gradient(75deg, #0000009a, #000000), url(../img/ham2.jpg);
+        background-size: cover;
+        transition: 2s;
+    }
+
+    30% {
+        background-color: rgb(151, 96, 2);
+        background-image:
+        linear-gradient(75deg, #0000009a, #000000), url(../img/hero.jpg);
+        background-size: cover;
+        transition: 2s;
+    }
+
+    75%{
+        background-color: rgb(109, 151, 2);
+        background-image:
+        linear-gradient(75deg, #0000009a, #000000), url(../img/rate3.jpg);
+        background-size: cover;
+        transition: 2s;
+    }
+    
+    100% {
+        background-color: rgb(109, 151, 2);
+        background-image:
+        linear-gradient(75deg, #0000009a, #000000), url(../img/pizza.jpg);
+        background-size: cover;
+        transition: 2s;
+    }
+
+}
